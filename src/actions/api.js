@@ -1,4 +1,4 @@
 import * as types from '../types'
-import {makeAsyncAction} from '../utils/makeActionCreator'
+import {makeAction} from '../utils/makeActionCreator'
 
-export const fetchJoke = makeAsyncAction(types.FETCH_JOKE)
+export const fetchJoke = makeAction(types.FETCH_JOKE)

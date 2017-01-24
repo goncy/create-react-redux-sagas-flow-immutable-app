@@ -2,7 +2,7 @@ import {put, call, takeEvery} from 'redux-saga/effects'
 
 import {fetchJoke} from '../actions/api'
 
-export function fetchJokeApi() {
+export function fetchJokeApi () {
   return fetch('https://api.chucknorris.io/jokes/random')
     .then(response => response.json())
 }
