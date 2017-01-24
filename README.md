@@ -1,5 +1,6 @@
 # React, Redux, Redux Sagas, Flow, Immutable starter
 
+Starter project based on create-react-app
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
