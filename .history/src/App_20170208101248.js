@@ -21,7 +21,7 @@ class App extends Component {
         <div className="App-intro">
           {jokes.map((joke, key) => (
             <div key={key}>
-              <p>{joke.value}</p>
+              <p>{joke}</p>
             </div>
           ))}
         </div>

@@ -30,4 +30,7 @@ const jokes = (
   }
 }
 
+export const getJokes = (jokes: jokesState): List<string> => jokes
+  .map(joke => joke.value)
+
 export default jokes

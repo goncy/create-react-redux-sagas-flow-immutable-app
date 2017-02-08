@@ -19,9 +19,7 @@ type JokeResponse = {
 
 type jokesState = List<JokeResponse>
 
-const jokes = (
-  state: jokesState = List(),
-  {type, payload}: JokesAction) => {
+const jokes = (state: jokesState = List(), {type, payload}: JokesAction) => {
   switch (type) {
     case fetchJoke.SUCCESS:
       return state.push(payload)
@@ -29,5 +27,8 @@ const jokes = (
       return state
   }
 }
+
+export const getJokes = (jokes: jokesState): List<string> => jokes
+  .map(joke => joke.value)
 
 export default jokes

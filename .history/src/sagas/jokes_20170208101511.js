@@ -11,6 +11,7 @@ export function fetchJokeApi () {
 
 export function* fetchJokeSaga (): void {
   const {error, response} = yield call(fetchJokeApi)
+  console.log(response, error)
   if (error) yield put(fetchJoke.failure(error))
   else if (response) yield put(fetchJoke.success(response))
 }

@@ -4,8 +4,7 @@ import {fetchJoke} from '../actions/api'
 
 export function fetchJokeApi () {
   return fetch('https://api.chucknorris.io/jokes/random')
-    .then(response => response.json())
-    .then(response => ({response}))
+    .then(response => ({response: response.json()}))
     .catch(error => ({error}))
 }
 

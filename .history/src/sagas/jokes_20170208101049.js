@@ -4,15 +4,14 @@ import {fetchJoke} from '../actions/api'
 
 export function fetchJokeApi () {
   return fetch('https://api.chucknorris.io/jokes/random')
-    .then(response => response.json())
-    .then(response => ({response}))
+    .then(response => ({response: response.json()}))
     .catch(error => ({error}))
 }
 
 export function* fetchJokeSaga (): void {
   const {error, response} = yield call(fetchJokeApi)
   if (error) yield put(fetchJoke.failure(error))
-  else if (response) yield put(fetchJoke.success(response))
+  yield put(fetchJoke.success(response))
 }
 
 export function* fetchJokeWatcher (): void {
