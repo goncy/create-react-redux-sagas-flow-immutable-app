@@ -3,8 +3,8 @@ import createSagaMiddleware from 'redux-saga'
 import { syncHistoryWithStore } from 'react-router-redux'
 import { browserHistory } from 'react-router'
 
-import rootReducer from '../reducers'
-import rootSaga from '../sagas'
+import rootReducer from './reducers'
+import rootSaga from './sagas'
 import sagaMonitor from '../utils/sagaMonitor'
 
 export default function configureStore () {
