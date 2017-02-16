@@ -2,7 +2,7 @@
 
 import {List} from 'immutable'
 
-import {fetchJoke} from '../actions'
+import {fetchJoke} from '../../actions'
 
 type JokesAction = {
   type: string,
