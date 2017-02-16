@@ -11,3 +11,4 @@ coverage
 .env
 npm-debug.log
 .vscode
+.history

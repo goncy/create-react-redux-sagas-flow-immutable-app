@@ -20,11 +20,14 @@
     "redux-saga": "^0.14.2"
   },
   "scripts": {
+    "prestart": "yarn flow",
+    "flow": "flow stop && flow start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && gh-pages -d build"
+    "deploy": "yarn build && gh-pages -d build",
+    "lintfix": "eslint ./src"
   },
   "eslintConfig": {
     "extends": ["react-app", "standard"]
