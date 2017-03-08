@@ -17,10 +17,10 @@ type JokeResponse = {
   value: string
 }
 
-type jokesState = List<JokeResponse>
+type JokesState = List<JokeResponse>
 
 const jokes = (
-  state: jokesState = List(),
+  state: JokesState = List(),
   {type, payload}: JokesAction) => {
   switch (type) {
     case fetchJoke.SUCCESS:
