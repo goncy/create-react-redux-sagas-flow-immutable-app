@@ -7,11 +7,11 @@ import configureStore from './store/configureStore'
 import Root from './Root'
 import './index.css'
 
-const {history, store} = configureStore()
+const store = configureStore()
 
 ReactDOM.render(
   <Provider store={store}>
-    <Root history={history} />
+    <Root />
   </Provider>,
   document.getElementById('root')
 )

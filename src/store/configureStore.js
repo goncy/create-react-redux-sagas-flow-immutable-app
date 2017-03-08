@@ -1,7 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import { syncHistoryWithStore } from 'react-router-redux'
-import { browserHistory } from 'react-router'
 
 import rootReducer from './reducers'
 import rootSaga from './sagas'
@@ -19,13 +17,8 @@ export default function configureStore () {
       composeEnhancers(applyMiddleware(sagaMiddleware))
     )
   }
-  // History
-  const history = syncHistoryWithStore(browserHistory, store)
   // Run saga middleware
   sagaMiddleware.run(rootSaga)
-  // Return store and history
-  return {
-    store,
-    history
-  }
+  // Return store
+  return store
 }

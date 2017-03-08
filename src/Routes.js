@@ -1,13 +1,11 @@
 import React from 'react'
-import { Router, Route, IndexRoute } from 'react-router'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import App from './components/App'
 
-const Routes = ({history}) => (
-  <Router history={history}>
-    <Route path="/">
-      <IndexRoute component={App} />
-    </Route>
+const Routes = () => (
+  <Router>
+    <Route exact path="/" component={App} />
   </Router>
 )
 
