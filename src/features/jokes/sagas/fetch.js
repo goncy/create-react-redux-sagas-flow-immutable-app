@@ -1,6 +1,6 @@
 import {put, call, takeEvery} from 'redux-saga/effects'
 
-import {fetchJoke} from '../../actions/api'
+import {fetchJoke} from '../actions'
 
 function fetchJokeApi () {
   return fetch('https://api.chucknorris.io/jokes/random')

@@ -1,13 +1,13 @@
 import {fork} from 'redux-saga/effects'
 
-import jokes from './jokes'
+import jokes from '../../features/jokes'
 
 function startSagas (...sagas) {
   return function * rootSaga () {
-    yield sagas.map(saga => fork(saga))
+    yield sagas.map(saga => saga.map(fork))
   }
 }
 
 export default startSagas(
-  ...jokes
+  ...jokes.sagas
 )

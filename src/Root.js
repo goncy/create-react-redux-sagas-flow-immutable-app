@@ -1,12 +1,29 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 
+import jokes from './features/jokes'
+
+import Layout from './features/common/Layout'
 import Routes from './Routes'
 
-export default class Root extends Component {
+class Root extends Component {
+  componentDidMount () {
+    for (let i = 0; i < 10; i++) {
+      this.props.fetchJoke()
+    }
+  }
+
   render () {
-    // This component it's simple but left like this to inject any necessary data at application level
     return (
-      <Routes />
+      <Layout>
+        <Routes/>
+      </Layout>
     )
   }
 }
+
+const mapDispatchToProps = {
+  fetchJoke: jokes.actions.fetchJoke.run
+}
+
+export default connect(undefined, mapDispatchToProps)(Root)

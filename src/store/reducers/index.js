@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import jokes from './jokes'
+import jokes from '../../features/jokes'
 
 const rootReducer = combineReducers({
-  jokes
+  [jokes.constants.NAMESPACE]: jokes.reducer
 })
 
 export default rootReducer
