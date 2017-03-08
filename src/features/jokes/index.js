@@ -1,6 +1,11 @@
+// Sagas
 import fetchSaga from './sagas/fetch'
+import populateSaga from './sagas/populate'
+// Reducers
 import reducer from './reducer'
+// Constants
 import * as constants from './constants'
+// Actions
 import * as actions from './actions'
 
 import List from './scenes/List'
@@ -10,7 +15,8 @@ export default {
   constants,
   reducer,
   sagas: [
-    fetchSaga
+    fetchSaga,
+    populateSaga
   ],
   scenes: {
     List
