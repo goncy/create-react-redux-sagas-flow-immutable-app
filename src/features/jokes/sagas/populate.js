@@ -2,7 +2,7 @@ import {delay} from 'redux-saga'
 import {put, take, call} from 'redux-saga/effects'
 
 import {fetchJoke} from '../actions'
-import {appInitialized} from '../../common/actions'
+import common from '../../common'
 
 function* populateJokesSaga () {
   for (let i = 0; i < 10; i++) {
@@ -12,7 +12,7 @@ function* populateJokesSaga () {
 }
 
 function* populateJokesWatcher () {
-  yield take(appInitialized.type)
+  yield take(common.actions.appInitialized.type)
   yield call(populateJokesSaga)
 }
 

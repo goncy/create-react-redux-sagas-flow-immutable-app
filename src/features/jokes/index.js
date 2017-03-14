@@ -7,7 +7,7 @@ import reducer from './reducer'
 import * as constants from './constants'
 // Actions
 import * as actions from './actions'
-
+// Scenes
 import List from './scenes/List'
 
 export default {

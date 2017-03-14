@@ -1,9 +1,10 @@
 import {put, call, takeEvery} from 'redux-saga/effects'
 
+import {API_URL} from '../constants'
 import {fetchJoke} from '../actions'
 
 function fetchJokeApi () {
-  return fetch('https://api.chucknorris.io/jokes/random')
+  return fetch(API_URL)
     .then(response => response.json())
     .then(response => ({response}))
     .catch(error => ({error}))
