@@ -1,7 +1,7 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
 
-import jokes from './features/jokes'
+import jokes from '../jokes'
 
 const Routes = () => (
   <div>

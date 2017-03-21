@@ -11,6 +11,7 @@ function fetchJokeApi () {
 }
 
 function* fetchJokeSaga () {
+  yield put(fetchJoke.start())
   const {error, response} = yield call(fetchJokeApi)
   if (error) yield put(fetchJoke.failure(error))
   else if (response) yield put(fetchJoke.success(response))
