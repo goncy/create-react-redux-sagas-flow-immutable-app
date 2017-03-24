@@ -1,6 +1,6 @@
 import {fork} from 'redux-saga/effects'
 
-import jokes from '../../features/jokes'
+import jokes from '../features/jokes'
 
 function startSagas (...sagas) {
   return function * rootSaga () {
