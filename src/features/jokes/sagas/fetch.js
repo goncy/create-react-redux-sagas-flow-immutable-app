@@ -1,7 +1,8 @@
-import {put, call, takeEvery} from 'redux-saga/effects'
+import {takeEvery} from 'redux-saga/effects'
 
 import {API_URL} from '../constants'
 import {fetchJoke} from '../actions'
+import apiSaga from 'redux-saga-api-call'
 
 function fetchJokeApi () {
   return fetch(API_URL)
@@ -10,15 +11,11 @@ function fetchJokeApi () {
     .catch(error => ({error}))
 }
 
-function* fetchJokeSaga () {
-  yield put(fetchJoke.start())
-  const {error, response} = yield call(fetchJokeApi)
-  if (error) yield put(fetchJoke.failure(error))
-  else if (response) yield put(fetchJoke.success(response))
-}
-
 function* fetchJokeWatcher () {
-  yield takeEvery(fetchJoke.type, fetchJokeSaga)
+  yield takeEvery(
+    fetchJoke.type,
+    apiSaga(fetchJokeApi)
+  )
 }
 
 export default [
