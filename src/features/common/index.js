@@ -4,9 +4,14 @@ import * as actions from './actions'
 import * as constants from './constants'
 // Layout
 import Layout from './components/Layout'
+// hocs
+import asyncFromAction from './hocs/asyncFromAction'
 
 export default {
   Layout,
   actions,
-  constants
+  constants,
+  hocs: {
+    asyncFromAction
+  }
 }

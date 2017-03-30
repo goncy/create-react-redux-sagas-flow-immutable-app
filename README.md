@@ -1,25 +1,26 @@
-#React, Redux, Redux Sagas, Flow, Immutable starter (and React router)
+# React, Redux, Redux Sagas, Flow, Immutable starter (and React router)
 
 Starter project based on create-react-app
----
 
-##Libraries
+
+## Libraries
 * React
 * Redux
 * Immutable
 * Redux sagas
 * Flow
 * React router (new)
+* Recompose (new)
 
-##Code style
+## Code style
 * Standard
 
-##Install
-```
-yarn install
+## Install
+```sh
+yarn
 ```
 
-##Init
-```
+## Init
+```sh
 yarn start
 ```
