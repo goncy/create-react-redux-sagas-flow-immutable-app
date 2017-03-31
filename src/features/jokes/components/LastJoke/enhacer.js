@@ -1,4 +1,4 @@
-import {compose, defaultProps} from 'recompose'
+import {compose, defaultProps, pure} from 'recompose'
 
 import {fetchJoke} from '../../actions'
 import common from '../../../common'
@@ -13,5 +13,6 @@ const defaultPropsHOC = defaultProps(initialProps)
 
 export default compose(
   defaultPropsHOC,
-  common.hocs.asyncFromAction
+  common.hocs.asyncFromAction,
+  pure
 )

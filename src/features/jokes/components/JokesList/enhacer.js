@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import {compose} from 'recompose'
+import {compose, pure} from 'recompose'
 
 const mapStateToProps = ({jokes}) => ({
   jokes
@@ -12,5 +12,6 @@ const connectHOC = connect(
 )
 
 export default compose(
-  connectHOC
+  connectHOC,
+  pure
 )
