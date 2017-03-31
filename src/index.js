@@ -4,7 +4,8 @@ import { Provider } from 'react-redux'
 
 import configureStore from './store/configureStore'
 
-import Root from './Root'
+import Root from './features/common/components/Root'
+
 import './index.css'
 
 const store = configureStore()

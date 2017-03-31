@@ -1,5 +1,6 @@
 import React from 'react'
-import {connect} from 'react-redux'
+
+import enhacer from './enhacer'
 
 const JokesList = ({jokes}) => (
   <div className='JokesList'>
@@ -11,8 +12,4 @@ const JokesList = ({jokes}) => (
   </div>
 )
 
-const mapStateToProps = ({jokes}) => ({
-  jokes
-})
-
-export default connect(mapStateToProps)(JokesList)
+export default enhacer(JokesList)

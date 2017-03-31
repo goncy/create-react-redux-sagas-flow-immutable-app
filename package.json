@@ -21,7 +21,8 @@
     "react-router-dom": "^4.0.0-beta.6",
     "recompose": "^0.22.0",
     "redux": "^3.6.0",
-    "redux-saga": "^0.14.2"
+    "redux-saga": "^0.14.2",
+    "redux-saga-api-call": "^0.0.5"
   },
   "scripts": {
     "prestart": "yarn flow",

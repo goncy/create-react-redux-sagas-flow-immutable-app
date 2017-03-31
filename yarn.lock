@@ -4759,9 +4759,19 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "^0.4.2"
 
+redux-saga-api-call@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/redux-saga-api-call/-/redux-saga-api-call-0.0.5.tgz#fd05331115c02cf7ff0a2ee0aa673f9157ffa6e2"
+  dependencies:
+    redux-saga "^0.14.4"
+
 redux-saga@^0.14.2:
   version "0.14.2"
   resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-0.14.2.tgz#b8b0b5354750fe1a222b74fc1c9489f70dd9fdbb"
+
+redux-saga@^0.14.4:
+  version "0.14.4"
+  resolved "https://registry.yarnpkg.com/redux-saga/-/redux-saga-0.14.4.tgz#a09acf294ef8387a0f23043e5c6d2f9f3fd25b54"
 
 redux@^3.6.0:
   version "3.6.0"

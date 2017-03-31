@@ -1,8 +1,6 @@
 import React from 'react'
-import {compose, defaultProps} from 'recompose'
 
-import {fetchJoke} from '../../actions'
-import common from '../../../common'
+import enhacer from './enhacer'
 
 const LastJoke = ({response}) => (
   <div>
@@ -11,9 +9,4 @@ const LastJoke = ({response}) => (
   </div>
 )
 
-export default compose(
-  defaultProps({
-    action: fetchJoke
-  }),
-  common.hocs.asyncFromAction
-)(LastJoke)
+export default enhacer(LastJoke)

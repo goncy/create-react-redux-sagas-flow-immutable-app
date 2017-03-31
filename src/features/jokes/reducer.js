@@ -4,20 +4,7 @@ import {List} from 'immutable'
 
 import {fetchJoke} from './actions'
 
-type JokesAction = {
-  type: string,
-  payload: any
-}
-
-type JokeResponse = {
-  category: ?string,
-  icon_url: string,
-  id: string,
-  url: string,
-  value: string
-}
-
-type JokesState = List<JokeResponse>
+import type {JokesAction, JokesState} from '../../flowtypes/jokes'
 
 const jokes = (
   state: JokesState = List(),
